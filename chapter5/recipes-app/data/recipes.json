@@ -1,0 +1,36 @@
+[
+  {
+    "name": "Baked Salmon",
+    "ingredients": [
+      { "name": "Salmon", "amount": 1, "mesurement": "1 lb" },
+      { "name": "Salmon", "amount": 1, "mesurement": "1 lb" },
+      { "name": "Salmon", "amount": 1, "mesurement": "1 lb" },
+      { "name": "Salmon", "amount": 1, "mesurement": "1 lb" },
+      { "name": "Salmon", "amount": 1, "mesurement": "1 lb" },
+      { "name": "Salmon", "amount": 1, "mesurement": "1 lb" }
+    ],
+    "steps": [
+      "Preheat the oven to 350 degrees.",
+      "Preheat the oven to 350 degrees.",
+      "Preheat the oven to 350 degrees.",
+      "Preheat the oven to 350 degrees.",
+      "Preheat the oven to 350 degrees.",
+      "Preheat the oven to 350 degrees."
+    ]
+  },
+  {
+    "name": "Fish Tacos",
+    "ingredients": [
+      { "name": "Whitefish", "amount": 1, "mesurement": "1 lb"},
+      { "name": "Whitefish", "amount": 1, "mesurement": "1 lb"},
+      { "name": "Whitefish", "amount": 1, "mesurement": "1 lb"},
+      { "name": "Whitefish", "amount": 1, "mesurement": "1 lb"},
+      { "name": "Whitefish", "amount": 1, "mesurement": "1 lb"}
+    ],
+    "steps": [
+      "Cook the fish on the grill until cooked through.",
+      "Cook the fish on the grill until cooked through.",
+      "Cook the fish on the grill until cooked through."
+    ]
+  }
+]
