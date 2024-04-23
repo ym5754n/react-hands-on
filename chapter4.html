@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>React Samples</title>
+  </head>
+  <body>
+    <!-- 描画のルート -->
+    <div id="root"></div>
+
+    <!-- ReactとReactDOM（両方とも開発版） -->
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+    <script>
+      // ここにコードを記述する
+      // const dish = React.createElement("h1", null, "Baked Salmon");
+      // const dessert = React.createElement("h2", null, "Coconut Cream Pie");
+      // ReactDOM.render([dish, dessert], document.getElementById("root"));
+      const ingredients = [
+        "2 lb Salmon",
+        "5 springs freash rosemary",
+        "2 tablespoons olive oil",
+        "2 small lemons",
+        "1 teaspoon kosher salt",
+        "4 cloves of chopped garlic",
+      ];
+      const instructions = [
+        "Preheat the oven to 350 degrees.",
+        "Preheat the oven to 350 degrees.",
+        "Preheat the oven to 350 degrees.",
+        "Preheat the oven to 350 degrees.",
+        "Preheat the oven to 350 degrees.",
+        "Preheat the oven to 350 degrees.",
+      ];
+      const IngredientsList = ({ ingredients }) => {
+        return React.createElement("ul", { className: "ingredients" },
+          ingredients.map((ingredient, key) => React.createElement("li", { key: key}, ingredient))
+        );
+      }
+      const InstructionsList = ({ instructions }) => {
+        return instructions.map((instruction, key) => React.createElement("p", { key: key }, instruction));
+      }
+      const list = React.createElement("section", { id: "baked-salmon" },
+        React.createElement("h1", null, "Baked Salmon"),
+        React.createElement(IngredientsList, { ingredients }, null),
+        React.createElement("section", { className: "ingredients" },
+          React.createElement("h2", null, "Cooking Instructions"),
+          React.createElement(InstructionsList, { instructions }, null),
+        ),
+      );
+      ReactDOM.render(list, document.getElementById("root"));
+    </script>
+  </body>
+</html>
