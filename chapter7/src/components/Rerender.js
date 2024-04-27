@@ -1,8 +1,10 @@
 import React, { useEffect } from "react";
 import { useAnyKeyToRender } from "../hooks/useAnyKeyToRender";
+import { useWindowSize } from "../hooks/useWindowSize";
 
 export default function Rerender() {
   useAnyKeyToRender();
+  useWindowSize();
 
   const word = "gnar";
   useEffect(() => {
