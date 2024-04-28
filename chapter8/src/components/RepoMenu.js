@@ -11,7 +11,7 @@ export default function RepoMenu({
   useEffect(() => {
     if (!name) return;
     onSelect(name);
-  }, [name]);
+  }, [name, onSelect]);
 
   return (
     <div style={{ display: "flex" }}>
