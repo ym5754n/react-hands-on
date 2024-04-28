@@ -1,32 +1,19 @@
+import { useState } from "react";
+
 import './App.css';
 import GitHubUser from './components/GitHubUser';
-// import { bigList } from './data/bigList';
-// import { FixedSizeList } from "react-window";
+import RepositoryReadme from './components/RepositoryReadme';
+import UserRepositories from './components/UserRepositories';
 
 function App() {
-  // const renderRow = ({ index, style }) => (
-  //   <div style={{ ...style, ...{ display: "flex" } }}>
-  //     <img
-  //       src={bigList[index].avatar}
-  //       alt={bigList[index].name}
-  //       width={50}
-  //     />
-  //     <p>{bigList[index].name} - {bigList[index].email}</p>
-  //   </div>
-  // );
-
+  const [login, ] = useState("ym5754n");
+  const [repo, ] = useState("react-hands-on");
   return (
     <div className="">
       <header className="App-header">
-        <GitHubUser login="ym5754n" />
-        {/* <FixedSizeList
-          height={window.innerHeight}
-          width={window.innerWidth - 20}
-          itemCount={bigList.length}
-          itemSize={50}
-        >
-          {renderRow}
-        </FixedSizeList> */}
+        <GitHubUser login={login} />
+        <UserRepositories login={login} />
+        <RepositoryReadme login={login} repo={repo} />
       </header>
     </div>
   );
