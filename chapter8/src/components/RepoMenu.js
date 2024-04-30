@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useIterator } from "../hooks/useIterator";
 
-export default function RepoMenu({ repositories, login }) {
-  const [{ name }, previous, next] = useIterator(repositories);
+export default function RepoMenu({ repositories, selected, onSelect = f => f }) {
+  const [{ name }, previous, next] = useIterator(
+    repositories,
+    selected ? repositories.findIndex(repo => repo.name === selected) : undefined
+  );
+
+  useEffect(() => {
+    if (!name) return;
+    onSelect(name);
+  }, [name, onSelect]);
 
   return (
     <div style={{ display: "flex" }}>
