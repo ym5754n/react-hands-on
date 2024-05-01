@@ -1,28 +1,14 @@
+import { useState } from "react";
 import './App.css';
-import SiteLayout from './components/SiteLayout';
-import Callout from './components/Callout';
-import ErrorBoundary from './components/ErrorBoundary';
-import { BreakThings } from './components/BreakThings';
+import Agreement from './components/Agreement';
+import Main from './components/Main';
 
 function App() {
-  return (
-    <SiteLayout
-      menu={
-        <ErrorBoundary>
-          <p>Site Layout Menu</p>
-          <BreakThings />
-        </ErrorBoundary>
-      }
-    >
-      <ErrorBoundary>
-        <Callout>Callout<BreakThings /></Callout>
-      </ErrorBoundary>
-      <ErrorBoundary>
-        <h1>Contents</h1>
-        <p>This is the main part og the example layout</p>
-      </ErrorBoundary>
-    </SiteLayout>
-  );
+  const [agree, setAgree] = useState(false);
+
+  if (!agree) return <Agreement onAgree={() => setAgree(true)} />;
+
+  return <Main />;
 }
 
 export default App;
